@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func createHandle(handleMap map[string]bool, rawFirstName string, rawLastName string) string {
+func CreateHandle(handleMap map[string]bool, rawFirstName string, rawLastName string) string {
 	handle := ""
 	regex := regexp.MustCompile(`\W`)
 	firstName := regex.ReplaceAllString(rawFirstName, "")

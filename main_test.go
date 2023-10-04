@@ -65,7 +65,7 @@ func TestGenerateUniqueHandle(t *testing.T) {
 		{map[string]bool{"JeBa": true, "JeBau": true, "JeaBau": true, "JeaBaum": true, "JeanBaum": true, "JeanBauma": true, "JeanCBauma": true, "JeanCBauman": true, "JeanClBauman": true, "JeanClBaumann": true, "JeanClaBaumann": true, "JeanClauBaumann": true, "JeanClaudBaumann": true, "JeanClaudeBaumann": true, "JeanClaudeBaumann1": true}, "Jean-Claude", "Baumann", "JeanClaudeBaumann2"},
 	}
 	for _, tt := range tests {
-		actual := createHandle(tt.existingHandles, tt.firstName, tt.lastName)
+		actual := CreateHandle(tt.existingHandles, tt.firstName, tt.lastName)
 		if actual != tt.expected {
 			t.Errorf("expected %s; got %s", tt.expected, actual)
 		}
